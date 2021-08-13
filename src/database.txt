@@ -2,20 +2,20 @@ create database library;
 
 use library;
 
-create table student(student_id varchar(25),name2 varchar(50),
-username varchar(50),
-phone varchar(25),course varchar(50),
-semester varchar(10),password2 varchar(25),
-securityq varchar(100),securityans varchar(100));
+create table student(student_id varchar(25) not null,name2 varchar(50) not null,
+username varchar (50) not null,
+phone varchar(25) not null,course varchar(50) not null,
+semester varchar(10),password2 varchar(25) not null,
+securityq varchar(100),securityans varchar(100) not null);
 
 create table book(
-book_id varchar (15),name1 varchar(100),isbn varchar(10),
-Author varchar(50),Category varchar(50));
+book_id varchar (15) not null,name1 varchar(100) not null,isbn varchar(10) not null,
+Author varchar(50) not null,Category varchar(50));
 
-create table issue(book_id varchar(50),student_id varchar(50),
-bname varchar(50),sname varchar(50),course varchar(50),
-dateofissue varchar(50));
+create table issue(book_id varchar(50) not null,student_id varchar(50) not null,
+bname varchar(50) not null,sname varchar(50) not null,course varchar(50),
+dateofissue varchar(50) not null);
 
-create table return1(book_id varchar(50),student_id varchar(50),
+create table return1(book_id varchar(50) not null,student_id varchar(50) not null,
 bname varchar(50),sname varchar(50),
-dateofissue varchar(50),dateofreturn varchar(50));
+dateofissue varchar(50) not null,dateofreturn varchar(50) not null);
